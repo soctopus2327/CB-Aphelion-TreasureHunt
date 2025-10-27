@@ -21,11 +21,109 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 CLUES = {
-    "it": ["it - clue1", "it - clue2", "it - clue3"],
-    "ece": ["ece - clue1", "ece - clue2", "ece - clue3"],
-    "canteen": ["canteen - clue1", "canteen - clue2", "canteen - clue3"],
-    "badminton": ["badminton - clue1", "badminton - clue2", "badminton - clue3"],
-    "architecture": ["architecture - clue1", "architecture - clue2", "architecture - clue3"],
+    "it": 
+    ["Seek the digital nebula where our society's first navigator charted the course. In this constellation of computers, the founder’s legacy still processes through the cosmic web.", 
+     '''There is a department of digital dreams,
+      Where our founder built celestial schemes,
+      With code as her brush,
+      And innovation's rush,
+      She painted the future in algorithmic streams.
+      ''', 
+     '''Decode this cosmic transmission to navigate your stellar journey:
+    ... . . -.- / - .... . / -... .. -. .- .-. -.-- / .-. . .- .-.. -- / .-- .... . .-. . / --- ..- .-. / ..-. --- ..- -. -.. . .-. / ..-. .. .-. … - / -.-. --- -- .--. .. .-.. . -.. / -.. .-. . .- -- ... / .. -. - --- / .-. . .- .-.. .. - -.--''',
+    '''In cosmic webs where starlight flows,
+    This realm of code forever grows.
+    The department with the newest ship
+    Where AKM leads with kindness and skill.'''
+    ],
+    "ece": 
+    ["Enter the quantum dimension where subatomic particles obey the laws of probability, and engineers harness the power of distant pulsars through electromagnetic wizardry.", 
+     '''In chambers smaller than a grain of sand,
+      Billions of transistors take their stand,
+      Each one a soldier in the binary war,
+      Fighting chaos with logic's law.
+      Seek the temple where chips are born,
+      In this electronic cosmic dawn.''', 
+     "Navigate to the stellar laboratory where circuit constellations are born, and resistors align like planets in perfect orbital harmony.",
+     '''Decrypt this signal to locate your next station.
+    - .... . / .--. .-.. .- -.-. . / .-- .... . .-. . / ...- --- .-.. - .- --. . / -.. .- -. -.-. . ... / .- -. -.. / . .-.. . -.-. - .-. --- -. ... / .--. .-.. .- -.--''',
+    '''Signals pulse like cosmic rays,
+      Through this place in endless ways.
+      Hardware, software, side by side,
+      Here your treasure likes to hide.''',
+      '''Constellations are stars combined,
+      Here too, great circuits are designed.
+      Explore the hub where sparks ignite,
+      Your cosmic clue is kept in sight.''',
+      '''Circuits whisper, logic sings,
+      Where future minds build cosmic things.
+      The giant of growth, wise and vast,
+      Seek where codes and circuits last.
+'''
+     ],
+    "canteen": 
+    ["The galactic diner where space travelers dock to refuel their biological engines before venturing into the academic cosmos.", 
+     "Seek the nebula where stellar chefs transform cosmic ingredients into earthly delights, fueling the next generation of space explorers.", 
+     '''Astronauts dine in packets small,
+      But here awaits a feast for all.
+      Where hunger fades and chatter flows,
+      Your cosmic trail in whispers grows.''',
+     '''Gravity pulls both moon and sun,
+      This place pulls everyone for fun.
+      Fuel your voyage, take a stand,
+      The next star waits where meals are planned.''',
+     '''Like a nebula swirling, warm and sweet,
+      This corner of CB is where all meet.
+      Look where biscuits, samosas, fry
+      Your clue lies where the hungry fly.''',
+     '''Warmth and chatter, bites divine,
+      Venus rules where hearts align.
+      Sweet or spicy, taste your fate —
+      The planet hides where friends debate.
+      '''
+    ],
+    "badminton": 
+      ["Houston, we have a game! Navigate to the launch pad where feathered projectiles orbit between opposing space stations.", 
+       '''Up and down, up and down,
+        Like satellites around Earth's crown,
+        White birds that never truly fly,
+        Yet dance between the floor and sky.
+        Find the court where gravity's jest
+        Makes earthbound souls feel truly blessed.
+        ''', 
+       "Where objects defy gravity in graceful arcs, much like comets dancing through the asteroid belt, the sport that mimics celestial mechanics awaits your discovery.",
+       '''Where comets streak and races are fast,
+        Here every shot is built to last.
+        Shuttles soar like meteors bright,
+        Find this court where stars take flight.''',
+        '''Galaxies spin, quick and wide,
+        Players here move side to side.
+        With every smash the cosmos sings,
+        Seek the place of feathered wings.
+        ''',
+        '''I’m a court where feathers fly,
+        Red like Mars, I touch the sky.
+        Smashes echo, spirits soar —
+        Find the planet near the score.
+        '''
+       ],
+    "architecture": 
+    ["Seek the cosmic architects who draft the blueprints for tomorrow's space colonies, where every line drawn reaches toward the stars.", 
+     '''There once was a department of design,
+      Where cosmic blueprints intertwine,
+      With rulers straight
+      They calculate fate,
+      And make the future plans align.
+      ''', 
+      '''Galaxies form with balance and grace,
+      Here too, structures take their place.
+      Designs are born of cosmic art,
+      Seek the halls where visions start.''',
+      '''Blueprints trace like starlight beams,
+      Here they build their cosmic dreams.
+      Bricks and domes in thought appear,
+      Among their models, sharp and grand.'''
+     "Find the department where universal blueprints take form, and designers shape the future homes of interplanetary civilizations."],
 }
 
 def pick_clues():
@@ -59,6 +157,7 @@ html, body, .stApp {
 .title {
   font-size: 44px;
   font-weight: 800;
+  font-family: 'Courier New', monospace;
   text-align: center;
   margin-bottom: 6px;
   color: #cfe3ff;
@@ -67,6 +166,15 @@ html, body, .stApp {
 
 .midtitle {
   font-size: 28px;   /* between 44px title and 14px subtitle */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #d4e0ff;
+  text-shadow: 0 2px 12px rgba(140,180,255,0.25);
+}
+
+.smalltitle {
+  font-size: 16px;   /* between 44px title and 14px subtitle */
   font-weight: 600;
   text-align: center;
   margin-bottom: 12px;
@@ -105,8 +213,9 @@ html, body, .stApp {
 st.markdown(css, unsafe_allow_html=True)
 
 html = '<div class="app-container">'
-html += '<div class="title">🌠 Celestial Biscuit</div>'
-html += '<div class="midtitle">Big Bang Hunt</div>'
+html += '<div class="smalltitle">🌠 Celestial Biscuit</div>'
+html += '<div class="title">Aphelion</div>'
+html += '<div class="midtitle">Treasure Hunt</div>'
 html += '<div class="subtitle">Go to the locations given in these clues and look for planets 🌍</div>'
 
 for c in st.session_state.clues:
