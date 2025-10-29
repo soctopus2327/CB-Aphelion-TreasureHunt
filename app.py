@@ -22,7 +22,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 CLUES = {
     "it": 
-    ["Seek the digital nebula where our society's first navigator charted the course. In this constellation of computers, the founder’s legacy still processes through the cosmic web.", 
+    ["Seek the digital nebula where our society's first navigator charted the course. In this constellation of computers, the founder’s legacy still processes through the cosmic web. [A04]", 
      '''There is a department of digital dreams,
       Where our founder built celestial schemes,
       With code as her brush,
