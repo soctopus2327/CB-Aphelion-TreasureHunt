@@ -122,7 +122,7 @@ CLUES = {
       '''Blueprints trace like starlight beams,
       Here they build their cosmic dreams.
       Bricks and domes in thought appear,
-      Among their models, sharp and grand. [E04]'''
+      Among their models, sharp and grand. [E04]''',
      "Find the department where universal blueprints take form, and designers shape the future homes of interplanetary civilizations. [E05]"],
 }
 
